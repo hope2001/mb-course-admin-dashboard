@@ -408,7 +408,7 @@
                 <div class="col-lg-12">
 
                     <div class="card">
-                        <div class="card-body">
+                        <div class="card-body overflow-auto">
                             <h5 class="card-title">Liste des Produits</h5>
                             <div class="d-flex justify-content-end">
                                 <a href="" class="mx-2 text-light  btn bg-success1 btn-sm" data-bs-toggle="modal"
@@ -424,7 +424,7 @@
                                 <div class="modal-dialog modal-dialog-scrollable">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title">Ajouter un prix</h5>
+                                            <h5 class="modal-title">Ajouter un produit</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                 aria-label="Close"></button>
                                         </div>
@@ -550,29 +550,32 @@
                             </div><!-- End Modal Dialog Scrollable-->
 
                             <!-- Table with stripped rows -->
-                            <table class="table datatable">
+                            <table  class=" table datatable w-100 overflow-auto">
                                 <thead>
                                     <tr>
                                         <th scope="col"></th>
                                         <th scope="col">Nom</th>
-                                        <th scope="col">Magazin</th>
-                                        <th scope="col">Prix</th>
-                                        <th scope="col">Pays</th>
-                                        <th scope="col">Status</th>
+                                        <th scope="col">Code barre</th>
+                                        <th scope="col">Nutriscore</th>
                                         <th scope="col">Commander</th>
                                         <th scope="col"></th>
                                         <th scope="col"></th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody >
                                     <tr>
-                                        <th scope="row"><img src="assets/img/messages-1.jpg" class="rounded-circle"
+                                        <th scope="row"><img src="assets/img/cocalogo.jpeg" class="rounded-circle"
                                                 style="width: 25px; height: 25px;" alt="" srcset=""></th>
                                         <td>Coca-Cola</td>
-                                        <td>Carefour</td>
-                                        <td>2500</td>
-                                        <td>France</td>
-                                        <td class="d-flex"> <span class="d-flex btn  btn-warning">En promotion</span>
+                                        <td> <strong>12506 &nbsp; 586 &nbsp;25 01</strong></td>
+                                        <td>
+                                            <span class="form-contro btn btn-sm btn-dark">
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                            </span>
                                         </td>
                                         <td><a href="">www.comande.com</a></td>
                                         <td><div class="btn btn-sm btn-dark" data-bs-toggle="modal"
@@ -624,8 +627,11 @@
                                                 </div>
                                                 <div class="row mb-3">
                                                     <label for="inputEmail" class="col-sm-4 col-form-label">Code barre</label>
-                                                    <div class="col-sm-8">
+                                                   <!-- <div class="col-sm-8">
                                                         <span class="form-contro"> <img src="assets/img/codebarre.png" class="w-25" alt="" srcset=""></span>
+                                                    </div>-->
+                                                    <div class="col-sm-8">
+                                                        <span class="form-contro"><strong>0025 &nbsp; 936&nbsp;587</strong> </span>
                                                     </div>
                                                 </div>
                                                 <div class="row mb-3">
@@ -702,41 +708,6 @@
                                                     </div>
                                                 </div>
 
-                                                <div class="row mb-3">
-                                                    <label class="col-sm-4 col-form-label">Magasin</label>
-                                                    <div class="col-sm-8">
-                                                        <span class="form-contro btn">
-                                                            Super Marché Mont Sinaï
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div class="row mb-3">
-                                                    <label for="inputPassword"
-                                                        class="col-sm-4 col-form-label">Prix</label>
-                                                    <div class="col-sm-8">
-                                                        <span class="form-contro btn ">
-                                                            1500 F
-                                                        </span>
-                                                    </div>
-                                                </div>
-
-                                                <div class="row mb-3">
-                                                    <label class="col-sm-4 col-form-label">Devise</label>
-                                                    <div class="col-sm-8">
-                                                        <span class="form-contro btn btn-danger">
-                                                            Dollars $
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div class="row mb-3">
-                                                    <label class="col-sm-4 col-form-label">Status</label>
-                                                    <div class="col-sm-8">
-                                                        <span class="form-contro">
-                                                           <div class="btn btn-warning">En promotion</div> 
-                                                        </span>
-                                                    </div>
-                                                </div>
-
 
                                             </form><!-- End General Form Elements -->
                                         </div>
@@ -758,117 +729,107 @@
                                 <div class="modal-dialog modal-dialog-scrollable">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title">Modifier un prix</h5>
+                                            <h5 class="modal-title">Modifier un produit</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                 aria-label="Close"></button>
                                         </div>
 
-                                        <div class="modal-body">
+
+                                        <div class="modal-body ">
                                             <!-- General Form Elements -->
-                                            <form>
+                                            <form class="text-dark">
                                                 <div class="row mb-3">
-                                                    <label for="inputText" class="col-sm-2 col-form-label">Image</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="file" class="form-control">
+                                                    <label for="inputText" class="col-sm-4 col-form-label">Image</label>
+                                                    <div class="col-sm-8">
+                                                        <span class="form-contro"> <img src="assets/img/cocalogo.jpeg" class="w-25" alt="" srcset=""></span>
                                                     </div>
                                                 </div>
                                                 <div class="row mb-3">
-                                                    <label for="inputEmail" class="col-sm-2 col-form-label">Nom du produit</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="text" class="form-control">
+                                                    <label for="inputEmail" class="col-sm-4 col-form-label">Nom du produit</label>
+                                                    <div class="col-sm-8">
+                                                        <span class="form-control"> Coca-Cola</span>
                                                     </div>
                                                 </div>
                                                 <div class="row mb-3">
-                                                    <label for="inputEmail" class="col-sm-2 col-form-label">Code barre</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="image" class="form-control">
+                                                    <label for="inputEmail" class="col-sm-4 col-form-label">Code barre</label>
+                                                   <!-- <div class="col-sm-8">
+                                                        <span class="form-contro"> <img src="assets/img/codebarre.png" class="w-25" alt="" srcset=""></span>
+                                                    </div>-->
+                                                    <div class="col-sm-8">
+                                                        <span class="form-contro"><strong>0025 &nbsp; 936&nbsp;587</strong> </span>
                                                     </div>
                                                 </div>
                                                 <div class="row mb-3">
-                                                    <label for="inputEmail" class="col-sm-2 col-form-label">Ingrédients</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="text" class="form-control">
+                                                    <label for="inputEmail" class="col-sm-4 col-form-label">Ingrédients</label>
+                                                    <div class="col-sm-8">
+                                                        <span class="form-control">
+                                                            <ul>
+                                                                <li> Eau   </li>
+                                                                <li>Acide citrique</li>
+                                                                <li>Cafeine</li>
+                                                                <li>Sucre</li>
+                                                            </ul>
+                                                        </span>
                                                     </div>
                                                 </div>
                                                 <div class="row mb-3">
-                                                    <label for="inputEmail" class="col-sm-2 col-form-label">Allergenes</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="text" class="form-control">
+                                                    <label for="inputEmail" class="col-sm-4 col-form-label">Allergenes</label>
+                                                    <div class="col-sm-8">
+                                                        <span class="form-control">
+                                                            <ul>
+                                                                <li>Acide citrique</li>
+                                                                <li>Cafeine</li>
+                                                            </ul>
+                                                        </span>
                                                     </div>
                                                 </div>
                                                 <div class="row mb-3">
-                                                    <label for="inputEmail" class="col-sm-2 col-form-label">Additifs</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="text" class="form-control">
+                                                    <label for="inputEmail" class="col-sm-4 col-form-label">Additifs</label>
+                                                    <div class="col-sm-8">
+                                                        <span class="form-control">
+                                                            <ul>
+                                                                <li>Cafeine</li>
+                                                                <li>Sucre</li>
+                                                                <li>Colorant</li>
+                                                                <li>Conservateur</li>
+                                                            </ul>
+                                                        </span>
                                                     </div>
                                                 </div>
                                                 <div class="row mb-3">
-                                                    <label for="inputEmail" class="col-sm-2 col-form-label">Régime compatible</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="text" class="form-control">
+                                                    <label for="inputEmail" class="col-sm-4 col-form-label">Régime compatible</label>
+                                                    <div class="col-sm-8">
+                                                        <span class="form-control">
+                                                            <ol>
+                                                               <li>Régime ammaigrissant </li>
+                                                                <li>Diète</li>
+                                                            </ol>
+                                                        </span>
                                                     </div>
                                                 </div>
                                                 <div class="row mb-3">
-                                                    <label for="inputEmail" class="col-sm-2 col-form-label">Nutriscore</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="text" class="form-control">
+                                                    <label for="inputEmail" class="col-sm-4 col-form-label">Nutriscore</label>
+                                                    <div class="col-sm-8">
+                                                        <span class="form-contro btn btn-dark">
+                                                            <i class="bi bi-star-fill text-warning"></i>
+                                                            <i class="bi bi-star-fill text-warning"></i>
+                                                            <i class="bi bi-star-fill text-warning"></i>
+                                                            <i class="bi bi-star-fill text-warning"></i>
+                                                            <i class="bi bi-star-fill text-warning"></i>
+                                                        </span>
                                                     </div>
                                                 </div>
                                                 <div class="row mb-3">
-                                                    <label for="inputEmail" class="col-sm-2 col-form-label">Classe NOVA</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="text" class="form-control">
+                                                    <label for="inputEmail" class="col-sm-4 col-form-label">Classe NOVA</label>
+                                                    <div class="col-sm-8">
+                                                        <span class="form-control"> 2</span>
                                                     </div>
                                                 </div>
                                                 <div class="row mb-3">
-                                                    <label for="inputEmail" class="col-sm-2 col-form-label">Origine</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="text" class="form-control">
-                                                    </div>
-                                                </div>
-
-                                                <div class="row mb-3">
-                                                    <label class="col-sm-2 col-form-label">Magasin</label>
-                                                    <div class="col-sm-10">
-                                                        <select class="form-select" aria-label="Default select example">
-                                                            <option disabled selected>Magasin
-                                                            </option>
-                                                            <option value="1">Carefour</option>
-                                                            <option value="2">Auchan Paris</option>
-                                                            <option value="3">Franc-Prix</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="row mb-3">
-                                                    <label for="inputPassword"
-                                                        class="col-sm-2 col-form-label">Prix</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="number" class="form-control">
-                                                    </div>
-                                                </div>
-
-                                                <div class="row mb-3">
-                                                    <label class="col-sm-2 col-form-label">Devise</label>
-                                                    <div class="col-sm-10">
-                                                        <select class="form-select" aria-label="Default select example">
-                                                            <option disabled selected>Devise
-                                                            </option>
-                                                            <option value="1">Euro €</option>
-                                                            <option value="2">Dollars $</option>
-                                                            <option value="3"> Yen</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="row mb-3">
-                                                    <label class="col-sm-2 col-form-label">Status</label>
-                                                    <div class="col-sm-10">
-                                                        <select class="form-select" aria-label="Default select example">
-                                                            <option disabled selected>Status
-                                                            </option>
-                                                            <option value="1">En promotion</option>
-                                                            <option value="1">En stock</option>
-                                                            <option value="1">Stock épuisé</option>
-                                                        </select>
+                                                    <label for="inputEmail" class="col-sm-4 col-form-label">Origine</label>
+                                                    <div class="col-sm-8">
+                                                        <span class="form-contro"> <div class="btn btn-info">Minérale</div>
+                                                        </span>
                                                     </div>
                                                 </div>
 
